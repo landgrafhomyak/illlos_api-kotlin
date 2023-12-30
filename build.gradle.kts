@@ -1,10 +1,10 @@
 plugins {
     kotlin("multiplatform") version "1.9.0"
-    application
+    `maven-publish`
 }
 
 group = "ru.landgrafhomyak"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -13,37 +13,30 @@ repositories {
 kotlin {
     jvm {
         jvmToolchain(8)
-        withJava()
-        testRuns.named("test") {
-            executionTask.configure {
-                useJUnitPlatform()
-            }
-        }
     }
     js {
-        binaries.executable()
-        browser {
-            commonWebpackConfig {
-                cssSupport {
-                    enabled.set(true)
-                }
-            }
-        }
+        browser()
+        nodejs()
     }
+
+    macosArm64()
+    macosX64()
+    linuxArm64()
+    linuxX64()
+    mingwX64()
+    androidNativeArm32()
+    androidNativeArm64()
+    androidNativeX64()
+    androidNativeX86()
+    iosArm64()
+    iosSimulatorArm64()
+    iosX64()
+    ios()
+//    wasm()
+    tvos()
+    watchos()
+
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
-        val jvmMain by getting
-        val jvmTest by getting
-        val jsMain by getting
-        val jsTest by getting
+        val commonMain by getting
     }
 }
