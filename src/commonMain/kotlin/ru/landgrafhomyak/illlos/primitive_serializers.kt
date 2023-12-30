@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 @OptIn(ExperimentalUnsignedTypes::class)
 fun parseUInt(src: UByteArray, offset: UInt): ULong {

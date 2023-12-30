@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalContracts::class)
 
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind

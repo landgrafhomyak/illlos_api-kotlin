@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 interface OutputObjectSerializationContext<@Suppress("unused") T : Any> {
     fun saveValue(fieldNo: UInt, value: ULong)

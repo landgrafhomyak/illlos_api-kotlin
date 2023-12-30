@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 interface LoaderReceiver {
     suspend fun parseHeader(ctx: InputDeserializationContext)

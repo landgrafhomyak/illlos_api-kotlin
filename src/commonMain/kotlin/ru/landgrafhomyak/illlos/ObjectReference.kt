@@ -1,3 +1,3 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 interface ObjectReference<@Suppress("unused") T : Any>

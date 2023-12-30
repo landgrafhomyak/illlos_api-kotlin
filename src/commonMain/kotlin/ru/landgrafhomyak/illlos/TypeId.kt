@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 import kotlin.jvm.JvmInline
 import kotlin.jvm.JvmStatic

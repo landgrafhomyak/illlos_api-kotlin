@@ -1,1 +1,1 @@
-rootProject.name = "object-database"
+rootProject.name = "illlos"

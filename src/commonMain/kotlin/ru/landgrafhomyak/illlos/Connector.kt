@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 interface Connector {
     suspend fun connectAndLoad(receiver: LoaderReceiver)

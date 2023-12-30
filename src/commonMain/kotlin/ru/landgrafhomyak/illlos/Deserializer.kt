@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.object_storage
+package ru.landgrafhomyak.illlos
 
 
 abstract class Deserializer<T : Any>(typeId: TypeId, objSize: UInt) : ObjectDescriptor<T>(typeId, objSize) {
