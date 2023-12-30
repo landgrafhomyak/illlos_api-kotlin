@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.illlos
+package ru.landgrafhomyak.illlos.api
 
 interface OutputObjectSerializationContext<@Suppress("unused") T : Any> {
     fun saveValue(fieldNo: UInt, value: ULong)

@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.illlos
+package ru.landgrafhomyak.illlos.api
 
 interface TransactionContext {
     suspend fun <T : Any> createObject(descriptor: ObjectDescriptor<T>): OutputObjectSerializationContext<T>

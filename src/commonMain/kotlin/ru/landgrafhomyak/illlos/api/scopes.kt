@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalContracts::class)
 
-package ru.landgrafhomyak.illlos
+package ru.landgrafhomyak.illlos.api
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind

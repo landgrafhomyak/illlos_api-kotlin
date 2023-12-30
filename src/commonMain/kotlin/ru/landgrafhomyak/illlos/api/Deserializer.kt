@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.illlos
+package ru.landgrafhomyak.illlos.api
 
 
 abstract class Deserializer<T : Any>(typeId: TypeId, objSize: UInt) : ObjectDescriptor<T>(typeId, objSize) {

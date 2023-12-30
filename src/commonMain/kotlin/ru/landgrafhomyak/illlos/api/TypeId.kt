@@ -1,4 +1,4 @@
-package ru.landgrafhomyak.illlos
+package ru.landgrafhomyak.illlos.api
 
 import kotlin.jvm.JvmInline
 import kotlin.jvm.JvmStatic
