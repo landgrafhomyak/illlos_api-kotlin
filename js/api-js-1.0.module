@@ -1,0 +1,127 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../api/1.0/api-1.0.module",
+    "group": "ru.landgrafhomyak.illlos",
+    "module": "api",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-dom-api-compat",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "api-js-1.0.klib",
+          "url": "api-js-1.0.klib",
+          "size": 22747,
+          "sha512": "016df0c6a655389c184e5ba5ee8eb3b0760cc2c99aac145296124853a725b4bd59624d684c5438dee0e1e5cc914bdd631ee2cf16b88e5845ea7fe5e5d5b2ddb8",
+          "sha256": "53b017c93abfc4a43c85104bef4fdefbfb2ce88828e2a65531afe8c6fe074095",
+          "sha1": "74b695f931be3c2adbdd62af2699b45ed2a4b037",
+          "md5": "b83fea00672df726ca9b0dff8bbc2f5e"
+        }
+      ]
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-dom-api-compat",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "api-js-1.0.klib",
+          "url": "api-js-1.0.klib",
+          "size": 22747,
+          "sha512": "016df0c6a655389c184e5ba5ee8eb3b0760cc2c99aac145296124853a725b4bd59624d684c5438dee0e1e5cc914bdd631ee2cf16b88e5845ea7fe5e5d5b2ddb8",
+          "sha256": "53b017c93abfc4a43c85104bef4fdefbfb2ce88828e2a65531afe8c6fe074095",
+          "sha1": "74b695f931be3c2adbdd62af2699b45ed2a4b037",
+          "md5": "b83fea00672df726ca9b0dff8bbc2f5e"
+        }
+      ]
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "files": [
+        {
+          "name": "api-js-1.0-sources.jar",
+          "url": "api-js-1.0-sources.jar",
+          "size": 6800,
+          "sha512": "bea5b028f05637681e6b4751677d822ae9839801ad1171a8de7376c579cd0bf247608ee0c5b4c9a25b5190c5668573670afd2ef9785723c981233df3ee4ebb9b",
+          "sha256": "76815cf9c54ccdbe9fdf9a4b2bf427247c7323e74263f38b4ce32016db41276f",
+          "sha1": "b784ff7cf36fb15575a0ec4fda3bcd9c2c33b187",
+          "md5": "0af73aa507ef928ce5db87f6abfb1bbf"
+        }
+      ]
+    }
+  ]
+}
