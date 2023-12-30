@@ -1,9 +1,7 @@
 package ru.landgrafhomyak.object_storage
 
-typealias TypeId = UByte
-
 @OptIn(ExperimentalUnsignedTypes::class)
-internal fun parseUInt(src: UByteArray, offset: UInt): ULong {
+fun parseUInt(src: UByteArray, offset: UInt): ULong {
     @Suppress("NAME_SHADOWING")
     val offset = offset.toInt()
     return src[offset].toULong().shl(56) or
@@ -16,8 +14,19 @@ internal fun parseUInt(src: UByteArray, offset: UInt): ULong {
             src[offset + 7].toULong()
 }
 
+fun parseUInt(b0: UByte, b1: UByte, b2: UByte, b3: UByte, b4: UByte, b5: UByte, b6: UByte, b7: UByte): ULong {
+    return b0.toULong().shl(56) or
+            b1.toULong().shl(48) or
+            b2.toULong().shl(40) or
+            b3.toULong().shl(32) or
+            b4.toULong().shl(24) or
+            b5.toULong().shl(16) or
+            b6.toULong().shl(8) or
+            b7.toULong()
+}
+
 @OptIn(ExperimentalUnsignedTypes::class)
-internal fun dumpULong(src: UByteArray, offset: UInt, value: ULong) {
+fun dumpULong(src: UByteArray, offset: UInt, value: ULong) {
     @Suppress("NAME_SHADOWING")
     val offset = offset.toInt()
     src[offset] = value.shr(56).toUByte()
@@ -28,19 +37,4 @@ internal fun dumpULong(src: UByteArray, offset: UInt, value: ULong) {
     src[offset + 5] = value.shr(16).toUByte()
     src[offset + 6] = value.shr(8).toUByte()
     src[offset + 7] = value.toUByte()
-}
-
-suspend inline fun OutputCollectionSerializationContext.addElement(creator: (OutputObjectSerializationContext) -> Unit) {
-    val ctx = this.addElement()
-    creator(ctx)
-}
-
-inline fun OutputCollectionSerializationContext.editElement(obj: StoredObject, editor: (OutputObjectSerializationContext) -> Unit) {
-    val ctx = this.editElement(obj)
-    editor(ctx)
-}
-
-inline fun <T:Any> OutputObjectSerializationContext.editCollection(collection: StoredCollection<T>, elementDescriptor: ObjectDescriptor<T>,  editor: (OutputCollectionSerializationContext) -> Unit) {
-    val ctx = this.editCollection(collection, elementDescriptor)
-    editor(ctx)
 }

@@ -1,13 +1,8 @@
 package ru.landgrafhomyak.object_storage
 
-
-@OptIn(ExperimentalUnsignedTypes::class)
-interface OutputObjectSerializationContext {
-    fun saveULong(offset: UInt, value: ULong)
-    fun savePtr(offset: UInt, value: Ptr)
-    fun savePtr(offset: UInt, value: StoredCollection<*>)
-    fun saveBlob(offset: UInt, dst: UByteArray, size: UInt = dst.size.toUInt(), dstOffset: UInt = 0u)
-    suspend fun allocString(raw: String): Ptr
-    suspend fun <T : Any> createCollection(elementDescriptor: ObjectDescriptor<T>): StoredCollection<T>
-    fun <T : Any> editCollection(collection: StoredCollection<T>, elementDescriptor: ObjectDescriptor<T>): OutputCollectionSerializationContext
+interface OutputObjectSerializationContext<@Suppress("unused") T : Any> {
+    fun saveValue(fieldNo: UInt, value: ULong)
+    fun <E : Any> saveObjectReference(fieldNo: UInt, descriptor: ObjectDescriptor<E>, reference: ObjectReference<E>)
+    fun <E : Any> saveCollectionReference(fieldNo: UInt, collectionElementdescriptor: ObjectDescriptor<E>, reference: CollectionReference<E>)
+    fun finishEditing()
 }
